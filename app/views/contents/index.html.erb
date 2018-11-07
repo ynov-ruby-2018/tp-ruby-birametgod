@@ -13,7 +13,8 @@
       <% @content.each do |contenu| %>
         <%= current_user.email %>
         <li><%= contenu.contenu %></li>
-        <
+        <button class="btn btn-dark">like</button>
+        <button class="btn btn-dark">Dislike</button>
       <% end %>
     </ul>
   </div>
