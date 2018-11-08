@@ -10,12 +10,17 @@
 
   <div class="row">
     <ul>
-      <% @content.each do |contenu| %>
-        <%= current_user.email %>
-        <li><%= contenu.contenu %></li>
-        <button class="btn btn-dark">like</button>
-        <button class="btn btn-dark">Dislike</button>
-      <% end %>
+      <% if @content.blank? %>
+        <%= Contenu vide %>
+      <%else %>
+        <% @content.each do |contenu| %>
+          <%= current_user.email %>
+          <li><%= contenu.contenu %></li>
+          <button class="btn btn-dark">like</button>
+          <button class="btn btn-dark">Dislike</button>
+        <% end %>
+      <%end %>
+
     </ul>
   </div>
 
