@@ -13,10 +13,10 @@
       <% if @content.blank? %>
         <%= Contenu vide %>
       <%else %>
-        <% @content.each do |contenu| %>
+        <% @content.each do |contenu| %> <!-- Mix FR/EN, bof bof... -->
           <%= current_user.email %>
-          <li><%= contenu.contenu %></li>
-          <button class="btn btn-dark">like</button>
+          <li><%= contenu.contenu %></li> <!-- Grmblf... ok ça marche, mais attention au nomage ! -->
+          <button class="btn btn-dark">like</button> 
           <button class="btn btn-dark">Dislike</button>
         <% end %>
       <%end %>
