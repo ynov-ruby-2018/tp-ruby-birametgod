@@ -12,7 +12,8 @@ class ContentsController < ApplicationController
 
     redirect_to contents_path
   end
-
+  # Il manque des features !
+  
   private
     def verify_admin
       authenticate_user!
