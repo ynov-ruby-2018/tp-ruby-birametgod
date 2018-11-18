@@ -1,6 +1,7 @@
 class ContentsController < ApplicationController
 
-  before_action :verify_admin
+  before_action :verify_admin # Ok ça marche, mais pourquoi pas directement authenticate_user! ?
+  
   def index
     @content = Content.all
   end
